@@ -18,10 +18,6 @@ const taskSchema = mongoose.Schema({
     timestamps: true
 })
 
-// taskSchema.pre('save',  async function (next){
-//     const task = this
-//     next()
-// })
 
 const Task = mongoose.model('Task', taskSchema)
 
