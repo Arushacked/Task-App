@@ -79,7 +79,7 @@ userRouter.patch('/users/me', auth, async  (req, res)=>{
 
 userRouter.delete('/users/me', auth, async  (req, res)=>{
     try{
-        req.user.remove()
+        await req.user.remove()
         res.send(req.user)
     }catch(e){
         res.status(500).send(e)
